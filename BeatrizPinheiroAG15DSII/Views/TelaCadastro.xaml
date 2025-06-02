@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeatrizPinheiroAG15DSII.Views.TelaCadastro"
+             Title="Cadastro Evento"
+             
+             BackgroundColor="PaleVioletRed">
+
+
+    <StackLayout Padding="10">
+        <Entry x:Name="txtNome" Placeholder="Nome do evento" Text="{Binding Nome}" />
+        
+
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Check-in:"/>
+            <DatePicker x:Name="dtpck_checkin" 
+                        DateSelected="dtpck_checkin_DateSelected"
+                        Format="dd/MM/yyyy"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Check-out:"/>
+            <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy"/>
+        </HorizontalStackLayout>
+
+        <Entry x:Name="txtNumeroParticipantes" 
+               Placeholder="Número de participantes" 
+               Keyboard="Numeric" />
+
+        <Entry x:Name="txtLocal" 
+               Placeholder="Local do evento" />
+
+        <Entry x:Name="txtCustoPorParticipante" 
+               Placeholder="Custo por participante" 
+               Keyboard="Numeric" />
+
+        <Button Text="Cadastrar Evento" HorizontalOptions="CenterAndExpand" Clicked="CadastrarEvento"/>
+    </StackLayout>
+</ContentPage>

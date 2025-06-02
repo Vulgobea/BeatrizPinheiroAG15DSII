@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeatrizPinheiroAG15DSII.Views.ResumoEvento"
+             Title="CadastroRealizado"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Padding="10">
+        <Label Text="Nome do Evento:" FontSize="20"/>
+        <Label Text="{Binding Nome}" FontSize="18"/>
+
+        <Label Text="Data de Início:"/>
+        <Label Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" />
+
+        <Label Text="Data de Término:"/>
+        <Label Text="{Binding DataCheckOut,StringFormat='{}{0:dd/MM/yyyy}'}" />
+
+        <Label Text="Duração (dias):"/>
+        <Label Text="{Binding DuracaoEvento}" />
+
+        <Label Text="Número de Participantes:"/>
+        <Label Text="{Binding NumeroParticipantes}" />
+
+        <Label Text="Local:"/>
+        <Label Text="{Binding Local}"/>
+
+        <Label Text="Custo Total:" FontSize="18" FontAttributes="Bold"/>
+        <Label Text="{Binding CustoTotal, StringFormat='{}{0:c'}" 
+               FontSize="18"/>
+
+        <Button Text="Voltar"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
+
+    </StackLayout>
+</ContentPage>

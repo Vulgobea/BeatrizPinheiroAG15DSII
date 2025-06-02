@@ -7,7 +7,7 @@ namespace BeatrizPinheiroAG15DSII
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new Views.TelaCadastro());
         }
         protected override Window CreateWindow(IActivationState? activationState)
         {
