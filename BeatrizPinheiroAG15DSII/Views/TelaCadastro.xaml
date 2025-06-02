@@ -3,37 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeatrizPinheiroAG15DSII.Views.TelaCadastro"
              Title="Cadastro Evento"
-             
-             BackgroundColor="PaleVioletRed">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="MistyRose">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
 
-    <StackLayout Padding="10">
-        <Entry x:Name="txtNome" Placeholder="Nome do evento" Text="{Binding Nome}" />
-        
+            <Label Grid.Row="0"
+               Text="Cadastro do Evento"
+               FontFamily="Deva-Bold"
+               FontSize="25"
+               TextColor="Firebrick"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               CharacterSpacing="0.5"/>
 
-        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Check-in:"/>
-            <DatePicker x:Name="dtpck_checkin" 
+
+
+        <StackLayout Padding="10">
+            <Entry x:Name="txtNome" 
+               Placeholder="Insira o nome do evento"
+               Text="{Binding Nome}"
+               FontFamily="Deva-Bold"
+               />
+
+
+            <HorizontalStackLayout 
+                Spacing="10"
+                HorizontalOptions="CenterAndExpand">
+                <Label Text="Check-in  :"
+                       FontFamily="Deva-Medium"
+                       TextColor="Maroon"/>
+                <DatePicker x:Name="dtpck_checkin" 
                         DateSelected="dtpck_checkin_DateSelected"
                         Format="dd/MM/yyyy"/>
-        </HorizontalStackLayout>
+            </HorizontalStackLayout>
 
-        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Check-out:"/>
-            <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy"/>
-        </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="CenterAndExpand">
+                <Label Text="Check-out:"
+                       FontFamily="Deva-Medium"
+                       TextColor="Maroon"/>
+                <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy"/>
+            </HorizontalStackLayout>
 
-        <Entry x:Name="txtNumeroParticipantes" 
+            <Entry x:Name="txtNumeroParticipantes" 
                Placeholder="Número de participantes" 
-               Keyboard="Numeric" />
+               Keyboard="Numeric"
+               FontFamily="Deva-Bold"
+               />
 
-        <Entry x:Name="txtLocal" 
-               Placeholder="Local do evento" />
+            <Entry x:Name="txtLocal" 
+               Placeholder="Local do evento"
+               FontFamily="Deva-Bold"/>
 
-        <Entry x:Name="txtCustoPorParticipante" 
+            <Entry x:Name="txtCustoPorParticipante" 
                Placeholder="Custo por participante" 
-               Keyboard="Numeric" />
+               Keyboard="Numeric"
+               FontFamily="Deva-Bold"/>
 
-        <Button Text="Cadastrar Evento" HorizontalOptions="CenterAndExpand" Clicked="CadastrarEvento"/>
-    </StackLayout>
+            <Button Text="Cadastrar Evento" 
+                    HorizontalOptions="CenterAndExpand" 
+                    Clicked="CadastrarEvento"
+                    FontFamily="Deva-Bold"
+                    BackgroundColor="Firebrick"/>
+        </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>

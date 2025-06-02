@@ -3,34 +3,84 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeatrizPinheiroAG15DSII.Views.ResumoEvento"
              Title="CadastroRealizado"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="MistyRose">
 
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+    
     <StackLayout Padding="10">
-        <Label Text="Nome do Evento:" FontSize="20"/>
-        <Label Text="{Binding Nome}" FontSize="18"/>
+        <Label Text="Nome do Evento:" 
+               FontSize="25"
+               FontFamily="Deva-Bold"
+               TextColor="Firebrick"/>
+        
+        <Label Text="{Binding Nome}" 
+               FontSize="20"
+               FontFamily="Deva-Bold"
+               TextColor="SaddleBrown"/>
 
-        <Label Text="Data de Início:"/>
-        <Label Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" />
+        <Label Text="Data de Início:"
+               FontSize="18"
+               FontFamily="Deva-Bold"
+               TextColor="Maroon"/>
+        
+        <Label Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
+               FontFamily="Deva-Bold"
+               TextColor="SaddleBrown"/>
 
-        <Label Text="Data de Término:"/>
-        <Label Text="{Binding DataCheckOut,StringFormat='{}{0:dd/MM/yyyy}'}" />
+        <Label Text="Data de Término:"
+               FontSize="18"
+               FontFamily="Deva-Bold"
+               TextColor="Maroon"/>
+        
+        <Label Text="{Binding DataCheckOut,StringFormat='{}{0:dd/MM/yyyy}'}" 
+               FontFamily="Deva-Bold"
+               TextColor="SaddleBrown"/>
 
-        <Label Text="Duração (dias):"/>
-        <Label Text="{Binding DuracaoEvento}" />
+        <Label Text="Duração (dias):"
+               FontSize="18"
+               FontFamily="Deva-Bold"
+               TextColor="Maroon"/>
+        
+        <Label Text="{Binding DuracaoEvento}"
+               FontFamily="Deva-Bold"
+               TextColor="SaddleBrown"/>
 
-        <Label Text="Número de Participantes:"/>
-        <Label Text="{Binding NumeroParticipantes}" />
+        <Label Text="Número de Participantes:"
+               FontSize="18"
+               FontFamily="Deva-Bold"
+               TextColor="Maroon"/>
+        
+        <Label Text="{Binding NumeroParticipantes}" 
+               FontFamily="Deva-Bold"
+               TextColor="SaddleBrown"/>
+        
+        <Label Text="Local:"
+               FontSize="18"
+               FontFamily="Deva-Bold"
+               TextColor="Maroon"/>
+        
+        <Label Text="{Binding Local}"
+               FontFamily="Deva-Bold"
+               TextColor="SaddleBrown"/>
 
-        <Label Text="Local:"/>
-        <Label Text="{Binding Local}"/>
-
-        <Label Text="Custo Total:" FontSize="18" FontAttributes="Bold"/>
-        <Label Text="{Binding CustoTotal, StringFormat='{}{0:c'}" 
-               FontSize="18"/>
+        <Label Text="Custo Total:" 
+               FontSize="18" 
+               FontAttributes="Bold"
+               FontFamily="Deva-Bold"
+               TextColor="Maroon"/>
+        
+        <Label Text="{Binding CustoTotal, StringFormat='{}{0:C}'}"
+               FontSize="18"
+               FontFamily="Deva-Bold"
+               TextColor="SaddleBrown"/>
 
         <Button Text="Voltar"
-                HorizontalOptions="Center"
-                Clicked="Button_Clicked"/>
+                HorizontalOptions="CenterAndExpand"
+                Clicked="Button_Clicked"
+                FontFamily="Deva-Bold"
+                BackgroundColor="Firebrick"/>
 
     </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
